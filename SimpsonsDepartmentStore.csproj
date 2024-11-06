@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8739408-C249-413B-9666-DD6CD5F5FACF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SimpsonsDepartmentStore</RootNamespace>
+    <AssemblyName>SimpsonsDepartmentStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBooking.Designer.cs">
+      <DependentUpon>AddBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTreatment.Designer.cs">
+      <DependentUpon>AddTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeautyAndCosmeticsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeautyAndCosmeticsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BeautyAndCosmeticsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BeautyAndCosmeticsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BeautyCosmetics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeautyCosmetics.Designer.cs">
+      <DependentUpon>BeautyCosmetics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDAL.cs" />
+    <Compile Include="BookingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingMenu.Designer.cs">
+      <DependentUpon>BookingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingsReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsReports.Designer.cs">
+      <DependentUpon>BookingsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDAL.cs" />
+    <Compile Include="CustomerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMenu.Designer.cs">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReports.Designer.cs">
+      <DependentUpon>CustomerReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBooking.Designer.cs">
+      <DependentUpon>DeleteBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStaff.Designer.cs">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTreatment.Designer.cs">
+      <DependentUpon>DeleteTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBooking.Designer.cs">
+      <DependentUpon>EditBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditStaff.Designer.cs">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTreatments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTreatments.Designer.cs">
+      <DependentUpon>EditTreatments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalQuestionnaire.Designer.cs">
+      <DependentUpon>MedicalQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsMenu.Designer.cs">
+      <DependentUpon>ReportsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StaffDAL.cs" />
+    <Compile Include="StaffMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMenu.Designer.cs">
+      <DependentUpon>StaffMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreatmentDAL.cs" />
+    <Compile Include="TreatmentMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreatmentMenu.Designer.cs">
+      <DependentUpon>TreatmentMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreatmentReports.Designer.cs">
+      <DependentUpon>TreatmentReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffReports.Designer.cs">
+      <DependentUpon>StaffReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnderConstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnderConstruction.Designer.cs">
+      <DependentUpon>UnderConstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBooking.Designer.cs">
+      <DependentUpon>ViewBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewCustomer.Designer.cs">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStaff.Designer.cs">
+      <DependentUpon>ViewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTreatment.Designer.cs">
+      <DependentUpon>ViewTreatment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBooking.resx">
+      <DependentUpon>AddBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTreatment.resx">
+      <DependentUpon>AddTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllBookings.rdlc" />
+    <EmbeddedResource Include="AllCustomers.rdlc" />
+    <EmbeddedResource Include="AllStaff.rdlc" />
+    <EmbeddedResource Include="BeautyCosmetics.resx">
+      <DependentUpon>BeautyCosmetics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingMenu.resx">
+      <DependentUpon>BookingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingsReports.resx">
+      <DependentUpon>BookingsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMenu.resx">
+      <DependentUpon>CustomerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReports.resx">
+      <DependentUpon>CustomerReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBooking.resx">
+      <DependentUpon>DeleteBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStaff.resx">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTreatment.resx">
+      <DependentUpon>DeleteTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBooking.resx">
+      <DependentUpon>EditBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStaff.resx">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTreatments.resx">
+      <DependentUpon>EditTreatments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalQuestionnaire.resx">
+      <DependentUpon>MedicalQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AllTreatments.rdlc" />
+    <EmbeddedResource Include="ReportsMenu.resx">
+      <DependentUpon>ReportsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMenu.resx">
+      <DependentUpon>StaffMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreatmentMenu.resx">
+      <DependentUpon>TreatmentMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreatmentReports.resx">
+      <DependentUpon>TreatmentReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffReports.resx">
+      <DependentUpon>StaffReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnderConstruction.resx">
+      <DependentUpon>UnderConstruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBooking.resx">
+      <DependentUpon>ViewBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewCustomer.resx">
+      <DependentUpon>ViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStaff.resx">
+      <DependentUpon>ViewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTreatment.resx">
+      <DependentUpon>ViewTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BeautyAndCosmeticsDataSet.xsc">
+      <DependentUpon>BeautyAndCosmeticsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BeautyAndCosmeticsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BeautyAndCosmeticsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BeautyAndCosmeticsDataSet.xss">
+      <DependentUpon>BeautyAndCosmeticsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BeautyAndCosmeticsDataSet1.xsc">
+      <DependentUpon>BeautyAndCosmeticsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BeautyAndCosmeticsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BeautyAndCosmeticsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BeautyAndCosmeticsDataSet1.xss">
+      <DependentUpon>BeautyAndCosmeticsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BeautyAndCosmetics.mdf" />
+    <Content Include="BeautyAndCosmetics_log.ldf">
+      <DependentUpon>BeautyAndCosmetics.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
